@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+require 'faraday'
+
 require 'veeqo/exception'
 
 module Veeqo
   module Middleware
-    class HttpException < Faraday::Response::Middleware
+    class HttpException < Faraday::Middleware
       include Veeqo::HttpErrors
 
       def on_complete(env)

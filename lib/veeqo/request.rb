@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 
 module Veeqo
@@ -51,6 +53,7 @@ module Veeqo
       def delete(path, params = {})
         response = raw_request(:delete, path, params)
         return response.body if response.body.empty?
+
         build_response_object response
       end
 
@@ -87,6 +90,7 @@ module Veeqo
 
       def parse(json)
         return [] if json.empty?
+
         Oj.load(json, symbol_keys: true)
       end
     end

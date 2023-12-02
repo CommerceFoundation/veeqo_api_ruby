@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Suppliers
 # Resources related to the suppliers in the API.
 # http://docs.veeqo.apiary.io/#reference/suppliers/supplier-collection
@@ -40,6 +42,7 @@ module Veeqo
 
     def self.update(resource_id, params = {})
       raise ArgumentError if resource_id.nil?
+
       put path.build(resource_id), params
     rescue Veeqo::NotAccepted
       nil

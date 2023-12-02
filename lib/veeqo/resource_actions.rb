@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Veeqo
   class ResourceActions < Module
     attr_reader :options
@@ -28,6 +30,7 @@ module Veeqo
 
       def find(resource_id, params = {})
         raise ArgumentError if resource_id.nil?
+
         get path.build(resource_id), params
       end
 
@@ -37,11 +40,13 @@ module Veeqo
 
       def update(resource_id, params = {})
         raise ArgumentError if resource_id.nil?
+
         put path.build(resource_id), params
       end
 
       def destroy(resource_id, params = {})
         raise ArgumentError if resource_id.nil?
+
         delete path.build(resource_id), params
       end
 

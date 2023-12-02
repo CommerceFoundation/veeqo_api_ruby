@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Channels
 # Resources related to the channels in the API.
 # http://docs.veeqo.apiary.io/#reference/stores/store-collection/list-all-stores

@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 module Veeqo
   class HttpError < StandardError
     attr_accessor :response_headers
+
     def initialize(headers)
       @response_headers = headers
     end
@@ -41,11 +44,12 @@ module Veeqo
 
     def throw_http_exception!(code, env)
       return unless ERRORS.keys.include? code
+
       response_headers = {}
       unless env.body.empty?
         response_headers = begin
           Oj.load(env.body, symbol_keys: true)
-        rescue
+        rescue StandardError
           {}
         end
       end

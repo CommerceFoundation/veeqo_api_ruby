@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'hashie'
 require 'oj'
-require 'faraday_middleware'
 require 'veeqo/version'
 require 'veeqo/config'
 require 'veeqo/connection'
@@ -19,8 +20,8 @@ module Veeqo
   class << self
     attr_reader :api, :config
 
-    def configure
-      @config = Veeqo::Config.new.tap { |h| yield(h) }
+    def configure(&block)
+      @config = Veeqo::Config.new.tap(&block)
       @api = Veeqo::Connection.build(@config)
     end
   end

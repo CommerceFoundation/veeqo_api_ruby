@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'veeqo/request'
 require 'veeqo/resource_actions'
 require 'veeqo/subresource_actions'

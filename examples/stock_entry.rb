@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 @warehouse = Veeqo::Warehouse.all.first
 @sellable = @order[:line_items].first[:sellable]
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Company
 # Metadata that describes the Company.
 # http://docs.veeqo.apiary.io/#reference/company/company/view-company-detail

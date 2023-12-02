@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Veeqo
   class SubresourceActions < ResourceActions
     attr_reader :options
@@ -13,31 +15,37 @@ module Veeqo
     module ClassMethods
       def all(parent_id, params = {})
         raise ArgumentError if parent_id.nil?
+
         get path.build(parent_id), params
       end
 
       def find(parent_id, resource_id, params = {})
         raise ArgumentError if [parent_id, resource_id].any?(&:nil?)
+
         get path.build([parent_id, resource_id]), params
       end
 
       def create(parent_id, params = {})
         raise ArgumentError if parent_id.nil?
+
         post path.build(parent_id), params
       end
 
       def update(parent_id, resource_id, params = {})
         raise ArgumentError if [parent_id, resource_id].any?(&:nil?)
+
         put path.build([parent_id, resource_id]), params
       end
 
       def destroy(parent_id, resource_id, params = {})
         raise ArgumentError if [parent_id, resource_id].any?(&:nil?)
+
         delete path.build([parent_id, resource_id]), params
       end
 
       def destroy_all(parent_id, params = {})
         raise ArgumentError if parent_id.nil?
+
         delete path.build(parent_id), params
       end
     end

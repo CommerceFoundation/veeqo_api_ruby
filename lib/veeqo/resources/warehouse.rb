@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Warehouses
 # Resources related to the Warehouses in the API.
 # http://docs.veeqo.apiary.io/#reference/warehouses/warehouse-collection

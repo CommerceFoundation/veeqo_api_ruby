@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Shipments
 # Resources related to the shipments in the API.
 # http://docs.veeqo.apiary.io/#reference/shipments/shipment-collection/create-a-shipment

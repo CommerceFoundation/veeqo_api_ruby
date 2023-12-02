@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'veeqo'
 
 Veeqo.configure do |config|
@@ -9,7 +11,7 @@ end
 @sellable = @order[:line_items].first[:sellable]
 
 # Create allocation
-@allocation = Veeqo::Allocation.create(@order.id, warehouse_id: @warehouse.id, connection: connection)
+@allocation = Veeqo::Allocation.create(@order.id, warehouse_id: @warehouse.id, connection:)
 
 # Update allocation
 Veeqo::Allocation.update(@order.id,

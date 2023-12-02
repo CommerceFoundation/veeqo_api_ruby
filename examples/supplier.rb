@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'veeqo'
 
 Veeqo.configure do |config|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # PurchaseOrder
 # Resources related to the purchase order in the API.
 # http://docs.veeqo.apiary.io/#reference/purchase-orders/purchase-order-collection/list-all-purchase-orders

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Tags
 # Resources related to the tags in the API.
 # http://docs.veeqo.apiary.io/#reference/tags/tag-collection

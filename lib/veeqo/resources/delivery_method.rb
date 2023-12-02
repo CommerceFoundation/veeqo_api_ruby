@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # DeliveryMethods
 # Resources related to the DeliveryMethods in the API.
 # http://docs.veeqo.apiary.io/#reference/delivery-methods/delivery-methods-collection/list-all-delivery-methods

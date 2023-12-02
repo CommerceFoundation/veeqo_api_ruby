@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Allocations
 # Resources related to the allocations in the API.
 # http://docs.veeqo.apiary.io/#reference/allocations/allocation-collection/create-a-new-allocation
